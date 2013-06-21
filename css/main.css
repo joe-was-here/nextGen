@@ -88,3 +88,11 @@ nav .active:hover {
     width:80%;
     margin:25px 0 0 5%;
 }
+
+
+
+.counters {
+    float:left;
+    font-size:50px;
+    width:15%;
+}
