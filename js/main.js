@@ -119,7 +119,7 @@ var nextGen = function ($) {
                 break;
             case 'pdfs' :
                 $.each(modulesObj[activeModule][clicked], function (key, val) {
-                    contentToShow.push('<a href="pdfs/' + val + '.pdf">Some PDF</a>');
+                    contentToShow.push('<a href="pdfs/' + val + '.pdf" target="_blank">Some PDF</a>');
                 });
                 $('.content').html(contentToShow.join('')).removeClass('navigating');
                 break;
