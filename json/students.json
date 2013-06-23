@@ -1,0 +1,15 @@
+{"students" : {
+        "Joe" : {
+            "course" : "courseThree",
+            "completedModules" : "1"
+        },
+        "Laura" : {
+            "course" : "courseTwo",
+            "completedModules" : "0"
+        },
+        "Vik" : {
+            "course" : "courseOne",
+            "completedModules" : "2"
+        }
+    }
+}

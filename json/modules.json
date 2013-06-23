@@ -1,0 +1,48 @@
+{"modules" : {
+        "moduleOne" : {
+            "title" : "Module 1",
+            "videos" : ["5zyqyXTQhiw", "kpmkLd86qwM", "CZlVpthaYEs", "K1PsDyhNFBI", "wusGIl3v044", "ymFDtbk2teE"],
+            "pdfs" : ["aaazzz", "bbbzzz", "ccczzz", "aaaxxx", "bbbxxx", "bbbyyy"],
+            "tests" : ["4", "2"],
+            "quiz" : ["3", "6"],
+            "assignments" : ["1", "2", "3"],
+            "forums" : []
+        },
+        "moduleTwo" : {
+            "title" : "Module 2",
+            "videos" : ["wUS72qO_oZw", "8RQeFXckwuk"],
+            "pdfs" : ["aaayyy"],
+            "tests" : ["1", "2", "3"],
+            "quiz" : [],
+            "assignments" : ["2"],
+            "forums" : ["a"]
+        },
+        "moduleThree" : {
+            "title" : "Module 3",
+            "videos" : [],
+            "pdfs" : ["aaazzz", "bbbzzz"],
+            "tests" : ["5", "1", "3"],
+            "quiz" : ["2", "3", "5", "1"],
+            "assignments" : ["2", "3"],
+            "forums" : ["c"]
+        },
+        "moduleFour" : {
+            "title" : "Module 4",
+            "videos" : ["SUufAhoHZ9w"],
+            "pdfs" : [],
+            "tests" : ["1"],
+            "quiz" : ["3", "5"],
+            "assignments" : ["3"],
+            "forums" : ["b"]
+        },
+        "moduleFive" : {
+            "title" : "Module 5",
+            "videos" : ["N2UI8m_0Ie8", "tlNepE_05-w", "YVrBNjHvjkE"],
+            "pdfs" : ["ccczzz", "aaaxxx", "bbbxxx", "bbbyyy"],
+            "tests" : [],
+            "quiz" : ["1"],
+            "assignments" : ["2", "1"],
+            "forums" : []
+        }
+    }
+}

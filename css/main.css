@@ -30,6 +30,10 @@ nav li {
     box-sizing:border-box;
 }
 
+.admin nav li {
+    width:25%;
+}
+
 .wrapper {
     height:100%;
 }
@@ -86,7 +90,7 @@ nav .active:hover {
 .content {
     float:right;
     width:80%;
-    margin:25px 0 0 5%;
+    margin:55px 0 0 5%;
 }
 
 
@@ -94,5 +98,28 @@ nav .active:hover {
 .counters {
     float:left;
     font-size:50px;
-    width:15%;
+    padding:0 6%;
+    margin:0 0 50px 0;
+    position:relative;
+    cursor:pointer;
+}
+
+.counters span {
+    font-size:16px;
+    position:absolute;
+    background:red;
+    color:#fff;
+    font-weight:bold;
+    width:26px;
+    height:26px;
+    padding:3px 2px 0 0;
+    text-align:center;
+    border-radius:14.5px;
+    top:-10px;
+    right:50px;
+}
+
+.counters .inactive {
+    background:#ebeaea;
+    color:#333;
 }
