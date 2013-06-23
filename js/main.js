@@ -86,7 +86,9 @@ var nextGen = function ($) {
                 counters.tooltip();
                 counters.click(function () {
                     var that = $(this);
-                    showContent(that.attr('data-section'));
+                    if ( !(that.children('.inactive').length) ) {
+                        showContent(that.attr('data-section'));
+                    }
                 });
             };
 
@@ -127,7 +129,6 @@ var nextGen = function ($) {
                 break;
             }
 
-            console.log(modulesObj[activeModule][clicked]);
         };
 
     });
