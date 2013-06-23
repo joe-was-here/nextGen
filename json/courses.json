@@ -1,12 +1,12 @@
 {"courses" : {
         "courseOne" : {
-            "modules" : ["1", "2", "3", "4", "5"]
+            "modules" : ["moduleOne", "moduleTwo", "moduleThree", "moduleFour", "moduleFive"]
         },
         "courseTwo" : {
-            "modules" : ["2", "4",]
+            "modules" : ["moduleTwo", "moduleFour"]
         },
         "courseThree" : {
-            "modules" : ["1", "3", "5"]
+            "modules" : ["moduleOne", "moduleThree", "moduleFive"]
         }
     }
 }
