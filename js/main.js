@@ -2,6 +2,7 @@ var nextGen = function ($) {
 
     $(document).ready(function () {
 
+        var studentPickWrap = $('.studentPicker');
         var studentPicker = $('.studentPicker select');
         var sideBar = $('.sideBar ul');
         //Load the students
@@ -29,7 +30,7 @@ var nextGen = function ($) {
         var modulesObj;
         var login = function (course, completed) {
             //Show loader
-            $('.studentPicker').addClass('loadingCourse').html('<i class="icon-spinner icon-spin"></i>');
+            studentPickWrap.addClass('loadingCourse').html('<i class="icon-spinner icon-spin"></i>');
             //Get the course JSON
             $.getJSON('json/courses.json', function (data) {
                 var modules = [];
@@ -43,14 +44,15 @@ var nextGen = function ($) {
                 //Set up clicks on module
                 $('.sideBar ul li').click(function () {
                     var that = $(this);
-                    if ( !(that.hasClass('active')) ) {
+                    if ( !(that.hasClass('active')) || !($('.navigating').length) ) {
                         $('.sideBar ul li').removeClass('active');
                         that.addClass('active');
+                        $('.content').addClass('navigating');
                         moduleBuilder(that.attr('data-module'));
                     }
                 });
                 //Hide the studentpicker
-                $('.studentPicker').hide();
+                studentPickWrap.hide();
             });
         };
 
@@ -106,6 +108,25 @@ var nextGen = function ($) {
         //Show content based on which icon was clicked
         var showContent = function (clicked) {
             var activeModule = $('.sideBar .active').attr('data-module');
+            var contentToShow = [];
+
+            switch ( clicked ) {
+            case 'videos' :
+                $.each(modulesObj[activeModule][clicked], function (key, val) {
+                    contentToShow.push('<iframe width="560" height="315" src="http://www.youtube.com/embed/' + val + '" frameborder="0" allowfullscreen></iframe>');
+                });
+                $('.content').html(contentToShow.join('')).removeClass('navigating');
+                break;
+            case 'pdfs' :
+                $.each(modulesObj[activeModule][clicked], function (key, val) {
+                    contentToShow.push('<a href="pdfs/' + val + '.pdf">Some PDF</a>');
+                });
+                $('.content').html(contentToShow.join('')).removeClass('navigating');
+                break;
+            default :
+                break;
+            }
+
             console.log(modulesObj[activeModule][clicked]);
         };
 

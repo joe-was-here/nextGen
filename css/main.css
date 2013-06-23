@@ -110,8 +110,14 @@ nav .active:hover {
     float:right;
     width:80%;
     margin:55px 0 0 5%;
+    padding:15px 0 0 0;
+    height:calc(100% - 170px);
+    overflow:scroll;
 }
 
+.content a {
+    display:block;
+}
 
 
 .counters {
